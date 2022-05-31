@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    font-family: Roboto;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+nav.navBar{
+    width: 100%;
+    height: 100px;
+    background-color: #886f6f;
+    display: flex;
+    justify-content: space-between;  
+}
+
+nav.navBar div{
+    width: 250px;
+    text-align: center;
+}
+
+nav.navBar div.Marca img {
+    position: relative;
+    height: 30px;
+    top: 28px;
+    display: flex;
+    justify-content: center;
+    padding-left: 40px;
+}
+
+nav.navBar div.Marca h2{
+    position: relative;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    padding-left: 40px;
+}
+
+nav.navBar ul.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 40px;
+}
+
+nav.navBar ul.menu {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #F3F3F3;
+    display: flex;
+}
+
+nav.navBar ul.menu li {
+    display: flex;
+    justify-content: space-between;
+    margin: 05px;
+}
+
+nav.navBar ul.menu img{
+    width: 35px;
+    
+}
