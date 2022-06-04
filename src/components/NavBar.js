@@ -1,5 +1,7 @@
 import logo from "../img/pasteleria.png"
-import carro from "../img/carros.png"
+import CartWidget from "./CartWidget"
+
+
 
 const NavBar = () => {
     return (
@@ -8,7 +10,6 @@ const NavBar = () => {
                 <img src={logo} alt="Logo" />
                 <h2>DAS Bakery</h2> 
             </div>
-
             <ul className="menu" type="none">
                 <li>
                     <a href="#">Productos</a>
@@ -22,7 +23,7 @@ const NavBar = () => {
                 <li>
                     <a href="#">Contacto</a>
                 </li>
-                <img src={carro} alt="carrito de compra" />
+                <CartWidget />
             </ul>
         </nav>
 )
