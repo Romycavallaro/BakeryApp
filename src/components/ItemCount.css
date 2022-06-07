@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    font-family: Roboto;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+div.botonContador{
+    width: 170px;
+    height: 180px;
+}
+
+div.botonContador p.Contador {
+    background-color: #eeb0b0;
+}
+
+div.botonContador button {
+    background-color: #dec5c5;
+    border-radius: 5px;
+    border: none;
+}

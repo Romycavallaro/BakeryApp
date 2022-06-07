@@ -9,7 +9,7 @@
 nav.navBar{
     width: 100%;
     height: 100px;
-    background-color: #863e3e;
+    background-color: #8f5656;
     display: flex;
     justify-content: space-between;  
 }
@@ -53,6 +53,7 @@ nav.navBar ul.menu {
 }
 
 nav.navBar ul.menu li {
+    color: black;
     display: flex;
     justify-content: space-between;
     margin: 05px;
