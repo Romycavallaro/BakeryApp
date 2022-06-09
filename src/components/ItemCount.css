@@ -7,8 +7,13 @@
 }
 
 div.botonContador{
-    width: 170px;
-    height: 180px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: Row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 40px;
 }
 
 div.botonContador p.Contador {
