@@ -4,6 +4,7 @@ const customFetch = (time, task) => {
             res(task)
             }, time) 
     })
-}
+};
 
 export default customFetch;
+
