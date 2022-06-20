@@ -1,13 +1,14 @@
 import React from 'react'
 import ItemCount from "./ItemCount"
 
-const ItemDetail = ({id, item }) => {
+const ItemDetail = ({id, name, img, price, descripcion, stock}) => {
   return (
     <div key={id}>
-        <h4>{item.name}</h4>
-        <h4>{item.descripcion}</h4>
-        <img src={item.img} alt={item.name} />
-        <ItemCount stock={item.stock} onAdd initial={1} />
+        <h4>{name}</h4>
+        <img src={img} alt={name} />
+        <h4>{descripcion}</h4>
+        <p>{price}</p>
+        <ItemCount stock={stock} onAdd initial={1} />
     </div>
   )
 }

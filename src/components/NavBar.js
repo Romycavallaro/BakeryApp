@@ -1,6 +1,7 @@
+import React from "react"
 import logo from "../img/pasteleria.png"
 import CartWidget from "./CartWidget"
-
+import { Link } from "react-router-dom"
 
 
 const NavBar = () => {
@@ -8,20 +9,21 @@ const NavBar = () => {
         <nav className="navBar">
             <div className="Marca">
                 <img src={logo} alt="Logo" />
-                <h2>DAS Bakery</h2> 
+                <Link to="/"><h2>DAS Bakery</h2> </Link>
+                
             </div>
             <ul className="menu" type="none">
                 <li>
-                    <a href="#">Productos</a>
+                    <Link to="/category/Tortas">Tortas</Link>
                 </li>
                 <li>
-                    <a href="#">Ofertas</a>
+                    <Link to="/category/Muffins">Muffins</Link>
                 </li>
                 <li>
-                    <a href="#">Quienes Somos</a>
+                    <Link to="/category/Cookies">Cookis</Link>
                 </li>
                 <li>
-                    <a href="#">Contacto</a>
+                    <Link to="/category/Ofertas">Ofertas</Link>
                 </li>
                 <CartWidget />
             </ul>
