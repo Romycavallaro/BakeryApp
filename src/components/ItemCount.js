@@ -16,14 +16,15 @@ const ItemCount = ({ stock, initial, onAdd}) => {
     };
 
     const confirmarContador = () => {  
-    }
+        onAdd(count);
+    };
 
     return (
         <div className="botonContador">
         <button onClick={restarItem}> - </button>
         <p className="Contador" style={{textAlign: 'center' }}>{count} </p>
         <button onClick={sumarItem}> + </button>
-        <button onClick={confirmarContador}>Comprar</button>
+        <button onClick={confirmarContador}>Agregar al carrito</button>
     </div>
     )
 }
