@@ -4,6 +4,7 @@ import './ItemCount.css'
 
 const ItemCount = ({ stock, initial, onAdd}) => {
     const [count, setCount] = useState(initial);
+   
 
     const sumarItem = () => {
         if(count < stock)
@@ -18,6 +19,7 @@ const ItemCount = ({ stock, initial, onAdd}) => {
     const confirmarContador = () => {  
         onAdd(count);
     };
+    
 
     return (
         <div className="botonContador">

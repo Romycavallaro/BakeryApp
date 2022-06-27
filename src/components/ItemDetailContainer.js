@@ -21,6 +21,7 @@ const ItemDetailContainer = () => {
 
 
     useEffect(() =>{
+        
         customFetch(1000, producto)
         getProductsById(parseInt(id))
         .then(resultado => setItem(resultado))
