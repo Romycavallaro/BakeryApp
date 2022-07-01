@@ -13,7 +13,7 @@ const ItemDetail = ({id, name, img, price, descripcion, stock}) => {
   };
   
   const agregarItemCarrito = () => {
-    resultado.addItem({id, name, price}, amount);
+    resultado.addItem({id, name, price, descripcion}, amount);
   };
 
   return (

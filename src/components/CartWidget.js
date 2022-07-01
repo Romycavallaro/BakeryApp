@@ -7,8 +7,9 @@ const CartWidget = () => {
     const resultado = useContext(contexto)
 
     return (
-       <Link to="/cart"> Carrito {resultado.cantidadDisponible} </Link>
-    )
-}
+    <Link to="/cart"> Carrito {resultado.cantidadDisponible} </Link>
+  );
+};
+
 
 export default CartWidget
