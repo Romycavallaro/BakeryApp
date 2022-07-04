@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react"
 import ItemList from "./ItemList"
-import { customFetch, getProductsByCategory } from '../utils/promise';
-import productos from "../utils/productos"
 import { Link, useParams } from "react-router-dom";
 import Spinner from './Spinner';
+import { db } from "./../configuraciones/firebase";
+import { getDocs, collection, query, where } from "firebase/firestore";
 
 
 const ItemListContainer = (props) => {
@@ -11,24 +11,29 @@ const ItemListContainer = (props) => {
     const [loading, setLoading] = useState(true);
     const { categoryId } = useParams();
 
+
     useEffect(() =>{
-        setLoading(true);
-        if(!categoryId) {
-            customFetch(1000, productos)
-            .then(resultado => {
-                setItems(resultado);
-                setLoading(false);
-            })
-            .catch((error) => console.log(error));
-          } else {
-            getProductsByCategory(categoryId)
-              .then((resultado) => {
-                setItems(resultado);
-                setLoading(false);
-              })
-              .catch((error) => console.log(error));
-          } 
-}, [categoryId]);
+      setLoading(true);
+      
+      const ref = categoryId
+      ? query(collection(db, 'productos'), where('categoryId', '==', categoryId))
+      : collection(db, 'productos');
+
+    getDocs(ref)
+      .then((res) => {
+        const productosMapeados = res.docs.map((resultado) => {
+          const aux = resultado.data();
+          aux.id = resultado.id;
+
+          return aux;
+        });
+        setLoading(false);
+        setItems(productosMapeados);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [categoryId]);
 
     return (
         <div className="saludo">

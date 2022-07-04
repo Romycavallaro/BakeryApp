@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 
 
-const Item = ({id, name, price, img, descripcion, stock}) => {
+const Item = ({id, name, price, img, descripcion}) => {
     return (
             <div key={id}>
                 <h4>{name}</h4>
