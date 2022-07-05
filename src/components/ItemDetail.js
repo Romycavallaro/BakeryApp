@@ -28,9 +28,15 @@ const ItemDetail = ({id, name, img, price, descripcion, stock}) => {
             {amount < 1 ? (
               <ItemCount stock={stock} initial={1} onAdd={onAdd} />
             ) : (
-              <Link to="/cart">
-                <button onClick = {agregarItemCarrito}> Finalizar Compra </button>
-              </Link>
+              <div>
+                <Link to="/cart">
+                  <button
+                    onClick={agregarItemCarrito}
+                  >
+                    Terminar mi compra
+                  </button>
+                </Link>
+              </div>
             )}
           </>
         ) : (

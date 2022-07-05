@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
 import Spinner from './Spinner';
-import { db } from './../configuraciones/firebase';
-import { doc, getDoc, collection } from 'firebase/firestore';
+import { collectionProductos } from './../configuraciones/firebase';
+import { doc, getDoc} from 'firebase/firestore';
 
 
 const ItemDetailContainer = () => {
@@ -12,9 +12,9 @@ const ItemDetailContainer = () => {
 
     useEffect(() =>{
         
-        getDoc(doc(collection(db, 'productos'), id))
+      const ref = doc(collectionProductos, id);
+      getDoc(ref)
         .then((res) => {
-          console.log(res.data(), res.id);
           setItem({
             id: res.id,
             ...res.data(),

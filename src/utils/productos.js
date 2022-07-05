@@ -1,6 +1,5 @@
 const productos = [
     {
-        id: 1,
         name: 'Torta Letter Cake',
         price: 1000,
         descripcion: 'Torta en forma de letra rellena y decorada',
@@ -9,7 +8,6 @@ const productos = [
         categoryId : 'Tortas'
     },
     {
-        id: 2,
         name: 'Muffins de Red Velvet',
         price: 1200,
         descripcion: '6 muffins base red velvet con frostin',
@@ -19,7 +17,6 @@ const productos = [
     },
 
     {
-        id: 4,
         name: 'Cookies',
         price: 1100,
         descripcion: '12 Cookies personalizadas',

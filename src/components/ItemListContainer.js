@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react"
 import ItemList from "./ItemList"
 import { Link, useParams } from "react-router-dom";
 import Spinner from './Spinner';
-import { db } from "./../configuraciones/firebase";
-import { getDocs, collection, query, where } from "firebase/firestore";
+import { collectionProductos } from "./../configuraciones/firebase";
+import { getDocs, query, where } from "firebase/firestore";
 
 
 const ItemListContainer = (props) => {
@@ -16,8 +16,8 @@ const ItemListContainer = (props) => {
       setLoading(true);
       
       const ref = categoryId
-      ? query(collection(db, 'productos'), where('categoryId', '==', categoryId))
-      : collection(db, 'productos');
+      ? query(collectionProductos, where('categoryId', '==', categoryId))
+      : collectionProductos;
 
     getDocs(ref)
       .then((res) => {

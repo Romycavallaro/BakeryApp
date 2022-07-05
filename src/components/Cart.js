@@ -1,30 +1,63 @@
-import React from 'react';
-import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
+import React, { useState, useContext, Link } from 'react';
+import { db } from '../configuraciones/firebase';
 import { contexto } from './CartContext';
+import OrderForm from "./Form/OrderForm";
 
 const Cart = () => {
-  const resultado = useContext(contexto);
+
+  const [userData, setUserData] = useState({ name: '', email: '', phone: '' });
+  const [orderId, setOrderId] = useState('');
+
+  const { carrito, removeItem, totalPrice, clearItems} = useContext(contexto);
+
+  const handleChange = (e) => {
+      const { name, value } = e.target;
+      setUserData({
+          ...userData,
+          [name]: value,
+      });
+  };
+
+  console.log(userData);
+
+  const handleSubmit = (e) => {
+      e.preventDefault();
+      const objOrden = {
+          buyer: {
+              name: userData.name,
+              phone: userData.phone,
+              email: userData.email,
+          },
+          carrito,
+          total: totalPrice,
+          date: serverTimestamp(),
+      };
+
+      const ref = collection(db, 'orders');
+      addDoc(ref, objOrden)
+      .then((response) => {
+        console.log(response.id);
+          setOrderId(response.id);
+          clearItems();
+      })
+  };
+
+  if (orderId !== '') {
+      return <h1>Gracias por tu compra, tu número de envío es: {orderId}</h1>;
+  }
+
   return (
     <>
-      {resultado.carrito.lenght < 1 ? (
+      {carrito.lenght < 1 ? (
         <div>
-          <p>
-            Tu carrito está vacío. Por favor, agregá algún producto para poder
-            continuar.
-          </p>
+          <p>Tu carrito está vacío. Por favor, agregá algún producto para poder
+            continuar.</p>
           <Link to="/">Volver al inicio</Link>
         </div>
       ) : (
         <div>
-          <div>
-            <p>Producto</p>
-            <p>Precio</p>
-            <p>Cantidad</p>
-            <p>Subtotal</p>
-          </div>
-          <div>
-            {resultado.carrito.map((item) => (
+            {carrito.map((item) => (
               <div key={item.id}>
                 <div>
                   <div>Item id: {item.id}</div>
@@ -33,17 +66,19 @@ const Cart = () => {
                   <div>{item.price}</div>
                   <div>{item.quantity}</div>
                 </div>
-
-                <button onClick={() => resultado.removeItem(item.id)}>Cancelar Item</button>
-              </div>
-            ))}
-            <div>
-              <p>Subtotal: $ {resultado.totalPrice}</p>
-              <p>Total: ${resultado.totalPrice}</p>
-              <button>Comprar</button>
-            </div>
-          </div>
+                <button onClick={() => removeItem(item.id)}>Cancelar Item</button>
         </div>
+      ))}
+        <div>
+          <p>Total: ${totalPrice}</p>
+          <button>Iniciar Compra</button>
+        </div>
+        <OrderForm
+            handleChange={handleChange}
+            userData={userData}
+            handleSubmit={handleSubmit}
+        />
+        </div>       
       )}
     </>
   );
