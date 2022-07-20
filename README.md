@@ -13,13 +13,16 @@ firebase: v "9.8.4"
 
 ## Uso e instalación
 En la consola de la Pc copiar el link para clonar el repositorio del proyecto.
-git clone https://github.com/Arriero82/vullioud-ecommerce.git
+git clone 
 Posicionado dentro la carpeta creada en el paso anterior, usar npm i para instalar lo que necesita la aplicación para ejecutarse.
 $ npm i
 Una vez completo el paso anterior, ejecutar el siguiente codigo en la consola para iniciar el mismo:
 $ npm start
 
-## Pantalla de Inicio del Ecoommerce
+## Pantalla de Inicio del Ecommerce
 
 http://localhost:3000/
+
+![image](https://user-images.githubusercontent.com/85654421/180050602-4fd7cc38-0c95-409f-b74a-94c3ecef88aa.png)
+
 
