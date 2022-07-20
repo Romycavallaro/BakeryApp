@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap');
 
 * {
-    font-family: Roboto;
+    font-family: Edu VIC WA NT Beginner;
+    font-size:large;
     margin: 0%;
     box-sizing: border-box;
 }
@@ -30,6 +31,7 @@ nav.navBar div.Marca img {
 
 nav.navBar div.Marca h2{
     position: relative;
+    font-size: 25px;
     height: 30px;
     display: flex;
     justify-content: center;
@@ -37,7 +39,7 @@ nav.navBar div.Marca h2{
 }
 
 nav.navBar ul.menu {
-    display: flex;
+    width: 450px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -46,7 +48,7 @@ nav.navBar ul.menu {
 
 nav.navBar ul.menu {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 50px;
     line-height: 19px;
     color: #F3F3F3;
     display: flex;
@@ -57,4 +59,62 @@ nav.navBar ul.menu li {
     display: flex;
     justify-content: space-between;
     margin: 05px;
+}
+
+nav.redes {
+    width: 100%;
+    height: 180px;
+    background-color: #222222;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav.redes img.logo{
+    position: relative;
+    height: 100px;
+    top: 35px;
+    display: flex;
+    justify-content: center;
+    padding-left: 150px;
+}
+
+nav.redes div.redsocial {
+    display: flex;
+    flex-direction: row;
+    padding-top: 25px;
+}
+
+nav.redes div.redsocial ul {
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    line-height: 29px;  
+    color: #F3F3F3;
+    padding-bottom: 10px;
+}
+
+nav.redes div.iconos {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+nav.redes img.rs{
+    position: relative;
+    height: 150px;
+    top: 15px;
+    display: flex;
+    justify-content: row;
+    align-items: center;
+    padding-right: 150px;
+}
+
+nav.derechos {
+    font-size: 10px;
+    line-height: 12px;
+    background-color: #C4C4C4;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 6px;
 }

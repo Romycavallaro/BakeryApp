@@ -6,6 +6,7 @@ import { collectionProductos } from "./../configuraciones/firebase";
 import { getDocs, query, where } from "firebase/firestore";
 
 
+
 const ItemListContainer = (props) => {
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -36,21 +37,22 @@ const ItemListContainer = (props) => {
   }, [categoryId]);
 
     return (
-        <div className="saludo">
-            <h3 style={{textAlign: 'center', color: '#863e74', fontFamily: 'cursive', fontSize: '30px'}}>{props.greeting}</h3>
-            {loading ? (
-                <Spinner />
-      ) : items.length <= 0 ? (
-        <>
-          <p>No encontramos productos en esta categoría</p>
-          <Link to="/">
-            <button>Ir al home</button>
-          </Link>
-        </>
-      ) : (
-        <ItemList products={items} />
-      )}
-    </div>
+      <><h3 className='saludo' >{props.greeting}</h3>
+        {loading ? (
+          <Spinner />
+        ) : items.length <= 0 ? (
+          <>
+            <div className="sinProductos">
+              <p>No encontramos productos en esta categoría</p>
+              <Link to="/">
+                <button className="Home">Ir al home</button>
+              </Link>
+              </div>
+          </>
+        ) : (
+          <ItemList products={items} />
+        )}
+      </>
   );
 };
 

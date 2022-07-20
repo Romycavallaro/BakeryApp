@@ -1,0 +1,19 @@
+div.resumen {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    margin-left: 10px;
+
+}
+
+button.addToCart {
+    padding: 0.5rem;
+    border: 1px solid #e17096;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: color ease 500ms;
+    transition: background-color ease 500ms;
+    margin-bottom: 150px;
+  }
+  

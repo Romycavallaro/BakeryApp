@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import Spinner from './Spinner';
 import { collectionProductos } from './../configuraciones/firebase';
 import { doc, getDoc} from 'firebase/firestore';
+import './ItemDetailContainer.css'
 
 
 const ItemDetailContainer = () => {
@@ -26,7 +27,7 @@ const ItemDetailContainer = () => {
     }, [id]);
 
     return  (
-        <div>
+        <div className="segundaPantalla">
         {Object.keys(item).length === 0 ? <Spinner /> : <ItemDetail {...item} />}
       </div>
     )

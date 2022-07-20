@@ -9,7 +9,7 @@ const NavBar = () => {
         <nav className="navBar">
             <div className="Marca">
                 <img src={logo} alt="Logo" />
-                <Link to="/"><h2>DAS Bakery</h2> </Link>
+                <Link to="/"><h2>DAL Bakery</h2> </Link>
                 
             </div>
             <ul className="menu" type="none">
@@ -20,7 +20,7 @@ const NavBar = () => {
                     <Link to="/category/Muffins">Muffins</Link>
                 </li>
                 <li>
-                    <Link to="/category/Cookies">Cookis</Link>
+                    <Link to="/category/Cookies">Cookies</Link>
                 </li>
                 <li>
                     <Link to="/category/Ofertas">Ofertas</Link>

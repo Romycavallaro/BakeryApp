@@ -1,12 +1,14 @@
 import React from 'react';
+import './OrderForm.css';
 
 const OrderForm = ({ handleChange, userData, handleSubmit }) => {
   return (
     <form onSubmit={handleSubmit}>
+      <div className='formulario'>
       <div>
-        <label>Nombre</label>
+        <label className='form'>Nombre</label>
         <br />
-        <input
+        <input className='input'
           type="text"
           placeholder="Ingrese su nombre"
           name="name"
@@ -16,9 +18,9 @@ const OrderForm = ({ handleChange, userData, handleSubmit }) => {
         ></input>
       </div>
       <div>
-        <label>Telefono</label>
+        <label className='form'>Telefono</label>
         <br />
-        <input
+        <input className='input'
           type="number"
           placeholder="Ingrese su telefono"
           name="phone"
@@ -28,9 +30,9 @@ const OrderForm = ({ handleChange, userData, handleSubmit }) => {
         ></input>
       </div>
       <div>
-        <label>Email</label>
+        <label className='form'>Email</label>
         <br />
-        <input
+        <input className='input'
           type="email"
           placeholder="Ingrese su email"
           name="email"
@@ -39,7 +41,21 @@ const OrderForm = ({ handleChange, userData, handleSubmit }) => {
           required
         ></input>
       </div>
-      <button>Finalizar Compra</button>
+      <div>
+        <label className='form'>Reconfirma Email</label>
+        <br />
+        <input className='input'
+          type="recEmail"
+          placeholder="Ingrese nuevamente su email"
+          name="recEmail"
+          onChange={handleChange}
+          value={userData.recEmail}
+          required
+        ></input>
+        
+      </div >
+      <button className='botonFinalizar'>Finalizar Compra</button>
+      </div>
     </form>
   );
 };

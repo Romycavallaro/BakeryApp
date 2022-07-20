@@ -1,0 +1,54 @@
+div.contenedorItem {
+    background: url('https://media.istockphoto.com/vectors/seamless-pattern-with-rainbow-colorful-falling-decorative-sprinkles-vector-id1205262503?k=20&m=1205262503&s=612x612&w=0&h=oHgiArgXoxOZHTSXLIW9dLqlXf5PflG9wYPFx26jQfM=');
+    margin-left: 10%;
+    display:  flex;
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+h3.saludo { 
+    margin: 10px;
+    text-align: center;
+    color: rgb(95, 1, 39);
+    font-size: 50px;
+}
+
+div.sinProductos {
+    background: url('https://media.istockphoto.com/vectors/blue-and-violet-rainbow-pastel-unicorn-girly-watercolor-on-paper-vector-id1322603518?k=20&m=1322603518&s=612x612&w=0&h=sUeELYvYbqxXmkuelY9aBSa-u27SlU0zWVOmI-OhmjY=');
+    width: 80%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+div.sinProductos p {
+    font-size: 30px;
+    padding-left: 15px;
+}
+
+button.Home {
+    display: flex;
+    padding-right: 15px;
+    background-color: #f5b2d7;
+    color: #380919;
+    transition: color ease 1000ms;
+    transition: background-color ease 1000ms;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 400px;
+    margin-top: 50px;
+  }
+  
+  button.Home:hover {
+    background-color: rgb(85, 18, 48);
+    color: #ffffff;
+    transition: color ease 1000ms;
+    transition: background-color ease 1000ms;
+  }
+  
+  button.Home:active {
+    box-shadow: 0 0.1rem 0.8rem  rgb(85, 18, 48);;
+  }
+
