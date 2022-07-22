@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import Spinner from './Spinner';
 import { collectionProductos } from "./../configuraciones/firebase";
 import { getDocs, query, where } from "firebase/firestore";
-
+import { toast } from 'react-toastify';
 
 
 const ItemListContainer = (props) => {
@@ -32,7 +32,7 @@ const ItemListContainer = (props) => {
         setItems(productosMapeados);
       })
       .catch((error) => {
-        console.log(error);
+        toast.error('Error de consulta de productos');
       });
   }, [categoryId]);
 

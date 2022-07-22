@@ -19,7 +19,8 @@ const ItemCount = ({ stock, initial, onAdd}) => {
     const confirmarContador = () => {  
         onAdd(count);
     };
-    
+
+     
 
     return (
         <div className="Count">

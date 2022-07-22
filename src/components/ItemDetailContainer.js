@@ -5,6 +5,7 @@ import Spinner from './Spinner';
 import { collectionProductos } from './../configuraciones/firebase';
 import { doc, getDoc} from 'firebase/firestore';
 import './ItemDetailContainer.css'
+import { toast } from 'react-toastify';
 
 
 const ItemDetailContainer = () => {
@@ -22,7 +23,7 @@ const ItemDetailContainer = () => {
           });
         })
         .catch((error) => {
-          console.log(error);
+          toast.error('Error de consulta de productos');
         });
     }, [id]);
 

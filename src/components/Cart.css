@@ -29,20 +29,31 @@ div.clave {
   div.botonesCompra {
     width: 300px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     padding-right: 15px;
     margin-top: 25px;
     margin-left: 20px;
   }
 
+  div.agregarQuitar {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  div.compra {
+    width: 150px;
+    margin-top: 15px;
+    margin-left: 70px;
+  }
+
   
   button.botonIniciar {
     display: flex;
-    padding-right: 15px;
     background-color: #f5b2d7;
     color: #380919;
-    transition: color ease 1000ms;
     transition: background-color ease 1000ms;
     padding: 10px;
     border-radius: 5px;
@@ -89,5 +100,10 @@ div.clave {
 
   .form {
     display: none;
+  }
 
+  div.carroVacio {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 250px;
   }

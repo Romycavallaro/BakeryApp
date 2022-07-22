@@ -4,6 +4,8 @@ import { db } from '../configuraciones/firebase';
 import { contexto } from './CartContext';
 import OrderForm from "./Form/OrderForm";
 import './Cart.css'
+import { toast } from 'react-toastify';
+import { Link } from "react-router-dom"
 
 const Cart = () => {
 
@@ -22,9 +24,6 @@ const Cart = () => {
           [recEmail] : value,
       });
   };
-
-  console.log(userData);
-  console.log(handleChange);
 
   const handleSubmit = (e) => {
       e.preventDefault();
@@ -64,17 +63,13 @@ const orderForm = () => {
   form.classList.remove("form")
 }
 
-console.log(handleSubmit);
-
   const validate = () => {
     if (userData.name.trim().length && userData.phone.trim().length && userData.email.trim().length && userData.email === userData.recEmail) {
         return true
     } else {
-        return false
+        toast.error('Los emails no coinciden. Ingrese mismo email en ambos casilleros');
     }
 }
-
-console.log(validate);
 
   if (orderId !== '') {
       return <div className='ordenFinalizada'>
@@ -90,10 +85,12 @@ console.log(validate);
   return (
     <>
       {carrito.length < 1 ? (
-        <div>
+        <div className='carroVacio'>
           <p className='carritoVacio'>Tu carrito está vacío. Por favor, agregá algún producto para poder
             continuar.</p>
-          
+          <div className='botonIniciar'>
+            <Link to="/"  style={{display: 'flex', padding: '10px', background: '#f5b2d7', color: '#380919', borderRadius: '5px', transition: 'background ease 1000ms', borderColor: '#380919', paddingLeft: '50px'}}>Volver al Home</Link>
+          </div>
         </div>
       ) : (
         <div className='ContenedorPrincipal'> 
@@ -106,8 +103,15 @@ console.log(validate);
                   <div>Cantidad: {item.quantity}</div>
                   <p>Total a pagar: ${totalPrice}</p>  
                   <div className='botonesCompra'>
-                    <button className='botonIniciar' onClick={() => removeItem(item.id)}>Cancelar Item</button>
-                    <button className='botonIniciar' onClick={orderForm}>Iniciar Compra</button>
+                    <div className='agregarQuitar'>
+                      <button className='botonIniciar' onClick={() => removeItem(item.id)}>Cancelar Item</button>
+                      <div className='botonIniciar'>
+                      <Link to="/"  style={{display: 'flex', padding: '10px', background: '#f5b2d7', color: '#380919', borderRadius: '5px', transition: 'background ease 1000ms', borderColor: '#380919'}}>Agregar mas productos</Link>
+                      </div>
+                    </div>
+                    <div className='compra'> 
+                      <button className='botonIniciar' onClick={orderForm}>Iniciar Compra</button>
+                    </div>
                 </div>           
         </div>
       ))} 

@@ -2,8 +2,8 @@ import { initializeApp } from "firebase/app";
 import  { collection, getFirestore } from "firebase/firestore"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAvWPRZ9EM7MYHjWPACVLEvsZjAhmtiUcs",
-  authDomain: "appbakerycoder.firebaseapp.com",
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
   projectId: "appbakerycoder",
   storageBucket: "appbakerycoder.appspot.com",
   messagingSenderId: "165320322911",
