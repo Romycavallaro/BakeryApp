@@ -12,7 +12,7 @@ Landing para ecommerce, en este caso sobre un emprendimiento de pastelería onli
 * react-toastify: v "9.0.7"
 
 ## Uso e instalación
-<<<<<<< HEAD
+
 * En la consola de la Pc copiar el link para clonar el repositorio del proyecto.
 * Usar el comando: git clone https://github.com/Romycavallaro/BakeryApp.git
 * Posicionado dentro la carpeta creada en el paso anterior, usar npm i para instalar lo que necesita la aplicación para ejecutarse.
@@ -26,3 +26,5 @@ http://localhost:3000/
 ## Link al video del uso de la aplicación
 
 ## Link al deploy
+
+https://incandescent-moonbeam-a8543a.netlify.app

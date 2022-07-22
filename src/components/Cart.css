@@ -105,5 +105,6 @@ div.clave {
   div.carroVacio {
     display: flex;
     flex-direction: column;
+    margin-left: 500px;
     margin-bottom: 250px;
   }

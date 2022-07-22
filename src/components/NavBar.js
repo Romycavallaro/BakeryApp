@@ -9,21 +9,21 @@ const NavBar = () => {
         <nav className="navBar">
             <div className="Marca">
                 <img src={logo} alt="Logo" />
-                <Link to="/"><h2>DAL Bakery</h2> </Link>
+                <Link to="/" style={{textDecoration: 'none', color: '#380919'}}><h2>DAL Bakery</h2> </Link>
                 
             </div>
             <ul className="menu" type="none">
                 <li>
-                    <Link to="/category/Tortas">Tortas</Link>
+                    <Link to="/category/Tortas" style={{textDecoration: 'none', color: '#380919'}}>Tortas</Link>
                 </li>
                 <li>
-                    <Link to="/category/Muffins">Muffins</Link>
+                    <Link to="/category/Muffins" style={{textDecoration: 'none', color: '#380919'}}>Muffins</Link>
                 </li>
                 <li>
-                    <Link to="/category/Cookies">Cookies</Link>
+                    <Link to="/category/Cookies" style={{textDecoration: 'none', color: '#380919'}}>Cookies</Link>
                 </li>
                 <li>
-                    <Link to="/category/Ofertas">Ofertas</Link>
+                    <Link to="/category/Ofertas" style={{textDecoration: 'none', color: '#380919'}}>Ofertas</Link>
                 </li>
                 <CartWidget />
             </ul>

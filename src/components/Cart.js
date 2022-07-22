@@ -89,7 +89,8 @@ const orderForm = () => {
           <p className='carritoVacio'>Tu carrito está vacío. Por favor, agregá algún producto para poder
             continuar.</p>
           <div className='botonIniciar'>
-            <Link to="/"  style={{display: 'flex', padding: '10px', background: '#f5b2d7', color: '#380919', borderRadius: '5px', transition: 'background ease 1000ms', borderColor: '#380919', paddingLeft: '50px'}}>Volver al Home</Link>
+            <Link to="/"  style={{display: 'flex', padding: '10px', background: '#f5b2d7', color: '#380919', borderRadius: '5px', transition: 'background ease 1000ms', borderColor: '#380919', paddingLeft: '50px', border: '1px solid rgb(85, 18, 48)',
+                                  textDecoration: 'none', width: '200px', marginLeft: '150px'}}>Volver al Home</Link>
           </div>
         </div>
       ) : (
@@ -106,7 +107,7 @@ const orderForm = () => {
                     <div className='agregarQuitar'>
                       <button className='botonIniciar' onClick={() => removeItem(item.id)}>Cancelar Item</button>
                       <div className='botonIniciar'>
-                      <Link to="/"  style={{display: 'flex', padding: '10px', background: '#f5b2d7', color: '#380919', borderRadius: '5px', transition: 'background ease 1000ms', borderColor: '#380919'}}>Agregar mas productos</Link>
+                      <Link to="/"  style={{display: 'flex', padding: '10px', background: '#f5b2d7', color: '#380919', borderRadius: '5px', transition: 'background ease 1000ms', borderColor: '#380919', textDecoration: 'none', border: '1px solid rgb(85, 18, 48)'}}>Agregar mas productos</Link>
                       </div>
                     </div>
                     <div className='compra'> 
