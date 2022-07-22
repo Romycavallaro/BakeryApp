@@ -23,6 +23,3 @@ $ npm start
 
 http://localhost:3000/
 
-![image](https://user-images.githubusercontent.com/85654421/180050602-4fd7cc38-0c95-409f-b74a-94c3ecef88aa.png)
-
-
