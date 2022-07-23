@@ -16,7 +16,7 @@ Landing para ecommerce, en este caso sobre un emprendimiento de pastelería onli
 * En la consola de la Pc copiar el link para clonar el repositorio del proyecto.
 * Usar el comando: git clone https://github.com/Romycavallaro/BakeryApp.git
 * Posicionado dentro la carpeta creada en el paso anterior, usar npm i para instalar lo que necesita la aplicación para ejecutarse.
-* Ejecutar con: $ npm i
+* Ejecutar con: $ npm install
 * Una vez completo el paso anterior, ejecutar el siguiente codigo en la consola para iniciar el mismo:
 * Inicializar con: $ npm start
 ## Pantalla de Inicio del Ecommerce
