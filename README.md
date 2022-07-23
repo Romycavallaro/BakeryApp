@@ -23,8 +23,13 @@ Landing para ecommerce, en este caso sobre un emprendimiento de pastelería onli
 
 http://localhost:3000/
 
+![image](https://user-images.githubusercontent.com/85654421/180604947-535ab9d1-7240-4d02-9de1-b1d58ad15389.png)
+
+
 ## Link al video del uso de la aplicación
+
+https://drive.google.com/file/d/1wP2Pqs3g3Xr6fH5x685za6l21xOHm0Um/view?usp=sharing
 
 ## Link al deploy
 
-https://incandescent-moonbeam-a8543a.netlify.app
+https://teal-douhua-557b79.netlify.app
